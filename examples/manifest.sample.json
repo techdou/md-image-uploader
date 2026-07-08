@@ -1,0 +1,14 @@
+{
+  "/home/user/lectures/assets/architecture.svg": {
+    "url": "https://cdn.example.com/2026/07/a1b2c3d4.svg",
+    "hash": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+    "size": 1024,
+    "uploaded_at": "2026-07-09T01:30:00"
+  },
+  "/home/user/lectures/assets/flowchart.svg": {
+    "url": "https://cdn.example.com/2026/07/e5f6a7b8.svg",
+    "hash": "e5f6a7b89c0d1e2f3a4b5c6d7e8f9a0b",
+    "size": 768,
+    "uploaded_at": "2026-07-09T01:30:00"
+  }
+}

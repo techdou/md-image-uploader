@@ -1,0 +1,83 @@
+# ============================================================
+# md-image-uploader .gitignore
+# ============================================================
+# 核心原则：
+# 1. 私密信息绝不泄露（凭据、个人图床 URL、本地上传产物）
+# 2. 开发软件配置目录不上传（缓存、IDE 配置、虚拟环境）
+# ============================================================
+
+# ---- Python 缓存与编译产物 ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ---- 测试与类型检查缓存 ----
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ---- 虚拟环境（本地开发用，不该入库）----
+venv/
+.venv/
+env/
+ENV/
+
+# ========================================
+# ⚠️ 安全：私密信息（绝不上传）
+# ========================================
+
+# 凭据配置文件（含 access_key/secret_key，明文存储）
+# 默认路径 ~/.md-image-uploader.json，但任何位置的都不该入库
+*.md-image-uploader.json
+config.local.json
+credentials.json
+
+# 上传清单（.upload-manifest.json）
+# 含真实图床 URL 和本地绝对路径，泄露会暴露：
+# - 你的 CDN 域名 / R2 bucket 名
+# - 本地文件系统结构（绝对路径）
+.upload-manifest.json
+*.upload-manifest.json
+manifest.local.json
+
+# 上传后的文档产物（含真实 hosted URL，可能不想公开）
+# 注：examples/ 下的样例 .uploaded.md 是教学用途，已在下方白名单放行
+# 这里只忽略运行时在非 examples 目录产生的产物
+/*.uploaded.md
+/*.uploaded.html
+
+# ---- 环境变量文件（可能含凭据）----
+.env
+.env.local
+.env.*.local
+
+# ========================================
+# 开发工具配置目录（不上传原则）
+# ========================================
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# 操作系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器临时文件
+*.tmp
+*.bak
+*.log
+
+# ---- Git 自身 ----
+# （不忽略 .git/，git 自己会处理）

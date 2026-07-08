@@ -1,0 +1,8 @@
+# Required for S3-compatible providers (R2/OSS/COS/MinIO/B2)
+boto3>=1.26
+
+# Optional: robust HTML parsing (falls back to regex if absent)
+# beautifulsoup4>=4.11
+
+# Optional: Qiniu provider only
+# qiniu>=7.11

@@ -1,0 +1,11 @@
+# Normalize line endings: repository stores LF, working copy uses native.
+# Prevents the LF/CRLF warnings on Windows and keeps diffs clean.
+* text=auto eol=lf
+
+# Binary files (SVGs here are text, so no special binary rules needed)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
