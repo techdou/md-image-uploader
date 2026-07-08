@@ -25,4 +25,7 @@ jobs:
 
       - name: Run smoke tests
         working-directory: ${{ github.workspace }}
+        env:
+          PYTHONUTF8: "1"
+          PYTHONIOENCODING: utf-8
         run: python tests/smoke_test.py

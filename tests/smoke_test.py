@@ -25,6 +25,13 @@ SCRIPTS_DIR = SKILL_ROOT / "scripts"
 sys.path.insert(0, str(SCRIPTS_DIR))
 sys.path.insert(0, str(SKILL_ROOT))
 
+# Force UTF-8 output so the ✓/✗ marks and CJK detail strings survive Windows
+# consoles that default to cp1252 (e.g. GitHub Actions windows-latest).
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 import manifest as manifest_mod  # noqa: E402
 import scanner  # noqa: E402
 from manifest import Manifest  # noqa: E402
