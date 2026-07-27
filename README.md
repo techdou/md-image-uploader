@@ -1,4 +1,29 @@
-# md-image-uploader
+# md-image-uploader | Markdown 图床上传
+
+[English](#english) | [中文](#中文)
+
+---
+
+<a id="中文"></a>
+## 中文
+
+Agent Skill，批量上传 Markdown/HTML 文档中的本地图片到图床（Cloudflare R2、阿里云 OSS、腾讯云 COS、七牛、MinIO、Backblaze B2），并将文档内的本地路径改写为 CDN URL。
+
+### 触发场景
+
+- 准备发博客/公众号/知乎前，把本地配图上线
+- 讲义配图外链化、修复文档中失效的本地图片链接
+- `replace ![alt](./assets/x.png) with hosted URLs`
+- 批量上传图片到图床
+
+支持去重清单、dry-run 预览、跳过代码块、原地或副本输出。
+
+下方英文为完整文档。
+
+---
+
+<a id="english"></a>
+## English
 
 <div align="center">
 
